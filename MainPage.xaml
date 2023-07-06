@@ -11,7 +11,10 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <HorizontalStackLayout x:Name="AddressBar" Background="Red"/>
+        <HorizontalStackLayout x:Name="AddressBar" Background="Red">
+            <Label Text="🏠"/>
+            <Label Text="Kirkegata 15"/>
+        </HorizontalStackLayout>
         <HorizontalStackLayout Grid.Row="1" x:Name="CarouselSection" Background="Green"/>
         <HorizontalStackLayout Grid.Row="2" x:Name="FeaturedSection" Background="Blue"/>
         <HorizontalStackLayout Grid.Row="3" x:Name="AdSection" Background="Pink"/>
