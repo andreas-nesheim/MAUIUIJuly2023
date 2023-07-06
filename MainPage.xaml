@@ -1,24 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUIUIJuly2023.MainPage">
+<ContentPage
+    x:Class="MAUIUIJuly2023.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
         </Grid.RowDefinitions>
-        <HorizontalStackLayout x:Name="AddressBar" Background="Red">
-            <Label Text="🏠"/>
-            <Label Text="Kirkegata 15"/>
+        <HorizontalStackLayout
+            x:Name="AddressBar"
+            Margin="16"
+            VerticalOptions="Center">
+            <Label Text="🏠 " />
+            <Label
+                FontAttributes="Bold"
+                Text=" Kirkegata 15 "
+                TextColor="#00bce1" />
+            <Label
+                FontAttributes="Bold"
+                Text=" ⬇️ (chevron)"
+                TextColor="#00bce1" />
         </HorizontalStackLayout>
-        <HorizontalStackLayout Grid.Row="1" x:Name="CarouselSection" Background="Green"/>
-        <HorizontalStackLayout Grid.Row="2" x:Name="FeaturedSection" Background="Blue"/>
-        <HorizontalStackLayout Grid.Row="3" x:Name="AdSection" Background="Pink"/>
-        <HorizontalStackLayout Grid.Row="4" x:Name="BottomNavBar" Background="Brown"/>
+        <StackLayout x:Name="CarouselSection" Grid.Row="1">
+            <HorizontalStackLayout
+                Margin="16"
+                Background="Green"
+                HeightRequest="130" />
+            <Grid Margin="16,0">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Gatematfestival er her! 💃"
+                    VerticalOptions="Center" />
+                <Button
+                    BackgroundColor="#ecf7fd"
+                    HorizontalOptions="End"
+                    Text="Vis alle"
+                    TextColor="#00bce1" />
+            </Grid>
+        </StackLayout>
+
+        <HorizontalStackLayout
+            x:Name="FeaturedSection"
+            Grid.Row="2"
+            Background="Blue" />
+        <HorizontalStackLayout
+            x:Name="AdSection"
+            Grid.Row="3"
+            Background="Pink" />
+        <HorizontalStackLayout
+            x:Name="BottomNavBar"
+            Grid.Row="4"
+            Background="Brown" />
     </Grid>
 
 </ContentPage>
