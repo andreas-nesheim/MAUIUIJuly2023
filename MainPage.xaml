@@ -17,13 +17,25 @@
             x:Name="AddressBar"
             Margin="16,10,16,0"
             VerticalOptions="Center">
-            <material:MauiIcon Icon="Home" IconColor="#00bce1" />
+            <Border
+                Padding="6"
+                Background="#ecf7fd"
+                Stroke="Black"
+                StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <material:MauiIcon Icon="Home" IconColor="#00bce1" />
+            </Border>
             <Label
                 FontAttributes="Bold"
-                Text=" Kirkegata 15 "
+                Text=" Kirkegata 15"
                 TextColor="#00bce1"
                 VerticalOptions="Center" />
-            <material:MauiIcon Icon="ExpandMore" IconColor="#00bce1" />
+            <material:MauiIcon
+                Padding="6"
+                Icon="ExpandMore"
+                IconColor="#00bce1" />
         </HorizontalStackLayout>
         <StackLayout x:Name="CarouselSection" Grid.Row="1">
             <HorizontalStackLayout
