@@ -37,12 +37,39 @@
                 Icon="ExpandMore"
                 IconColor="#00bce1" />
         </HorizontalStackLayout>
-        <StackLayout x:Name="CarouselSection" Grid.Row="1">
-            <HorizontalStackLayout
-                Margin="16"
-                Background="Green"
-                HeightRequest="130" />
-            <Grid Margin="16,0">
+        <Grid x:Name="CarouselSection" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="3*" />
+
+            </Grid.RowDefinitions>
+            <CarouselView IndicatorView="indicatorView">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <Image HeightRequest="220" Source="restaurant.jpg" />
+                        </Border>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+            </CarouselView>
+            <IndicatorView
+                x:Name="indicatorView"
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Grid Grid.Row="2" Margin="16,0">
                 <Label
                     FontAttributes="Bold"
                     FontSize="18"
@@ -55,7 +82,7 @@
                     Text="Vis alle"
                     TextColor="#00bce1" />
             </Grid>
-        </StackLayout>
+        </Grid>
 
         <HorizontalStackLayout
             x:Name="FeaturedSection"
