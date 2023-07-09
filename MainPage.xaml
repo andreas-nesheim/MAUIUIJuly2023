@@ -13,10 +13,9 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="60" />
         </Grid.RowDefinitions>
-        <HorizontalStackLayout
-            x:Name="AddressBar"
-            Margin="16,10,16,0"
-            VerticalOptions="Center">
+
+        <!--  Address bar section  -->
+        <HorizontalStackLayout Margin="16,10,16,0" VerticalOptions="Center">
             <Border
                 Padding="6"
                 Background="#ecf7fd"
@@ -37,12 +36,13 @@
                 Icon="ExpandMore"
                 IconColor="#00bce1" />
         </HorizontalStackLayout>
-        <Grid x:Name="CarouselSection" Grid.Row="1">
+
+        <!--  Carousel section  -->
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="9*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="3*" />
-
             </Grid.RowDefinitions>
             <CarouselView IndicatorView="indicatorView">
                 <CarouselView.ItemTemplate>
@@ -87,10 +87,8 @@
             </Grid>
         </Grid>
 
-        <CollectionView ItemsLayout="HorizontalList"
-            x:Name="FeaturedSection"
-            Grid.Row="2">
-
+        <!--  Featured section  -->
+        <CollectionView Grid.Row="2" ItemsLayout="HorizontalList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Border Margin="10,0" WidthRequest="300">
@@ -110,16 +108,21 @@
             </CollectionView.ItemsSource>
         </CollectionView>
 
-        <!-- Ad section -->
-        <StackLayout Grid.Row="3">
-            <Border HeightRequest="200" Margin="10,0" Grid.Row="3" WidthRequest="300">
+        <!--  Ad section  -->
+        <StackLayout Grid.Row="3" Background="blue">
+            <Border
+                Grid.Row="3"
+                Margin="10,0"
+                HeightRequest="120"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="300">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
                 <Image HeightRequest="200" Source="restaurant.jpg" />
             </Border>
         </StackLayout>
-    
+
         <HorizontalStackLayout
             x:Name="BottomNavBar"
             Grid.Row="4"
