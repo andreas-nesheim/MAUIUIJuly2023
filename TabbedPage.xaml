@@ -5,10 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
     xmlns:local="clr-namespace:MAUIUIJuly2023"
+    xmlns:material="clr-namespace:MauiIcons.Material;assembly=MauiIcons.Material"
     android:TabbedPage.ToolbarPlacement="Bottom">
-    <local:MainPage Title="Discovery" />
-    <local:MainPage Title="Restauranter" />
-    <local:MainPage Title="Butikker" />
-    <local:MainPage Title="Søk" />
-    <local:MainPage Title="Profil" />
+    <local:MainPage Title="Discovery" IconImageSource="{material:Icon Icon=LocationCity}" />
+    <local:MainPage Title="Restauranter" IconImageSource="{material:Icon Icon=Fastfood}" />
+    <local:MainPage Title="Butikker" IconImageSource="{material:Icon Icon=Store}" />
+    <local:MainPage Title="Søk" IconImageSource="{material:Icon Icon=Search}" />
+    <local:MainPage Title="Profil" IconImageSource="{material:Icon Icon=Person}" />
 </TabbedPage>
