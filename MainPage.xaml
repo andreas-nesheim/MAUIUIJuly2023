@@ -47,7 +47,10 @@
             <CarouselView IndicatorView="indicatorView">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Border>
+                        <Border WidthRequest="300">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="20" />
+                            </Border.StrokeShape>
                             <Image HeightRequest="220" Source="restaurant.jpg" />
                         </Border>
                     </DataTemplate>
