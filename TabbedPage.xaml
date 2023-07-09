@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="MAUIUIJuly2023.TabbedPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:local="clr-namespace:MAUIUIJuly2023"
+    android:TabbedPage.ToolbarPlacement="Bottom">
+    <local:MainPage Title="Discovery" />
+    <local:MainPage Title="Restauranter" />
+    <local:MainPage Title="Butikker" />
+    <local:MainPage Title="Søk" />
+    <local:MainPage Title="Profil" />
+</TabbedPage>

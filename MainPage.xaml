@@ -109,7 +109,7 @@
         </CollectionView>
 
         <!--  Ad section  -->
-        <StackLayout Grid.Row="3" Background="blue">
+        <StackLayout Grid.Row="3">
             <Border
                 Grid.Row="3"
                 Margin="10,0"
@@ -123,10 +123,6 @@
             </Border>
         </StackLayout>
 
-        <HorizontalStackLayout
-            x:Name="BottomNavBar"
-            Grid.Row="4"
-            Background="Brown" />
     </Grid>
 
 </ContentPage>
