@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\ad.png" />
 	  <None Remove="Resources\Images\pizza.jpg" />
 	</ItemGroup>
 

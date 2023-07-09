@@ -5,30 +5,26 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:material="clr-namespace:MauiIcons.Material;assembly=MauiIcons.Material">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="160" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="60" />
-        </Grid.RowDefinitions>
+    <Grid RowDefinitions="60, *, 160, *, 60">
 
         <!--  Address bar section  -->
-        <HorizontalStackLayout Margin="16,10,16,0" VerticalOptions="Center">
+        <HorizontalStackLayout Margin="16,10" VerticalOptions="Center">
             <Border
                 Padding="6"
-                Background="#ecf7fd"
+                BackgroundColor="#ecf7fd"
                 Stroke="Black"
                 StrokeThickness="0">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20" />
+                    <RoundRectangle CornerRadius="30" />
                 </Border.StrokeShape>
-                <material:MauiIcon Icon="Home" IconColor="#00bce1" />
+                <material:MauiIcon
+                    Icon="GpsFixed"
+                    IconColor="#00bce1"
+                    IconSize="22" />
             </Border>
             <Label
                 FontAttributes="Bold"
-                Text=" Kirkegata 15"
+                Text=" Din nåværende posisjon"
                 TextColor="#00bce1"
                 VerticalOptions="Center" />
             <material:MauiIcon
@@ -44,9 +40,9 @@
                     <DataTemplate>
                         <Border WidthRequest="300">
                             <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="20" />
+                                <RoundRectangle CornerRadius="10" />
                             </Border.StrokeShape>
-                            <Image HeightRequest="220" Source="restaurant.jpg" />
+                            <Image HeightRequest="230" Source="restaurant.jpg" />
                         </Border>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
@@ -89,33 +85,42 @@
                 <DataTemplate>
                     <Border Margin="10,0" WidthRequest="300">
                         <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="20" />
+                            <RoundRectangle CornerRadius="12" />
                         </Border.StrokeShape>
                         <Grid>
                             <Image HeightRequest="200" Source="pizza.jpg" />
-                            <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="20" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="20" />
-                                    <RowDefinition Height="20" />
-                                </Grid.RowDefinitions>
-
+                            <Grid RowDefinitions="28, *, 20, 40">
+                                <Border
+                                    Margin="0,0,14,0"
+                                    BackgroundColor="#009de0"
+                                    HorizontalOptions="End"
+                                    StrokeThickness="0"
+                                    WidthRequest="55">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="0,0,6,6" />
+                                    </Border.StrokeShape>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="Center"
+                                        Text="-25%"
+                                        TextColor="White"
+                                        VerticalOptions="Center" />
+                                </Border>
                                 <Label
                                     Grid.Row="2"
+                                    Padding="10,0,0,0"
                                     FontAttributes="Bold"
                                     FontSize="17"
                                     Text="Mano Pizza"
                                     TextColor="White" />
                                 <Label
                                     Grid.Row="3"
+                                    Padding="10"
                                     FontAttributes="Bold"
                                     Text="På utvalgte Pizza"
                                     TextColor="White" />
-
                             </Grid>
                         </Grid>
-
                     </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
@@ -130,17 +135,10 @@
 
         <!--  Ad section  -->
         <StackLayout Grid.Row="3">
-            <Border
-                Grid.Row="3"
-                Margin="10,0"
-                HeightRequest="120"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="300">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20" />
-                </Border.StrokeShape>
-                <Image HeightRequest="200" Source="restaurant.jpg" />
-            </Border>
+            <Image
+                Margin="10"
+                Source="ad.png"
+                VerticalOptions="EndAndExpand" />
         </StackLayout>
 
     </Grid>
