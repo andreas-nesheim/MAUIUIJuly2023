@@ -38,12 +38,7 @@
         </HorizontalStackLayout>
 
         <!--  Carousel section  -->
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="9*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="3*" />
-            </Grid.RowDefinitions>
+        <Grid Grid.Row="1" RowDefinitions="9*, *, 3*">
             <CarouselView IndicatorView="indicatorView">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
@@ -81,6 +76,7 @@
                     VerticalOptions="Center" />
                 <Button
                     BackgroundColor="#ecf7fd"
+                    HeightRequest="40"
                     HorizontalOptions="End"
                     Text="Vis alle"
                     TextColor="#00bce1" />
@@ -95,7 +91,31 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="20" />
                         </Border.StrokeShape>
-                        <Image HeightRequest="200" Source="restaurant.jpg" />
+                        <Grid>
+                            <Image HeightRequest="200" Source="pizza.jpg" />
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="20" />
+                                </Grid.RowDefinitions>
+
+                                <Label
+                                    Grid.Row="2"
+                                    FontAttributes="Bold"
+                                    FontSize="17"
+                                    Text="Mano Pizza"
+                                    TextColor="White" />
+                                <Label
+                                    Grid.Row="3"
+                                    FontAttributes="Bold"
+                                    Text="På utvalgte Pizza"
+                                    TextColor="White" />
+
+                            </Grid>
+                        </Grid>
+
                     </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
