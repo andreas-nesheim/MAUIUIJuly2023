@@ -9,7 +9,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="160" />
             <RowDefinition Height="*" />
             <RowDefinition Height="60" />
         </Grid.RowDefinitions>
@@ -87,10 +87,29 @@
             </Grid>
         </Grid>
 
-        <HorizontalStackLayout
+        <CollectionView ItemsLayout="HorizontalList"
             x:Name="FeaturedSection"
             Grid.Row="2"
-            Background="Blue" />
+                        
+             >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="10,0" WidthRequest="300">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Image HeightRequest="200" Source="restaurant.jpg" />
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>test</x:String>
+                    <x:String>test</x:String>
+                    <x:String>test</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+        </CollectionView>
         <HorizontalStackLayout
             x:Name="AdSection"
             Grid.Row="3"
